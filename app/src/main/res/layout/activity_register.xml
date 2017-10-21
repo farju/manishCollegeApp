@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    android:background="@color/colorPrimary"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/lineView">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:paddingBottom="16dp">
+
+            <ImageView
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_centerHorizontal="true"
+                android:layout_margin="16dp"
+                android:layout_marginTop="20dp"
+                android:src="@mipmap/ic_launcher" />
+
+            <LinearLayout
+                android:id="@+id/ll"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp"
+                android:orientation="vertical">
+
+                <EditText
+                    android:id="@+id/name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/edit_text_backgroung"
+                    android:backgroundTint="#fff"
+                    android:hint="Name*"
+                    android:inputType="textPersonName"
+                    android:padding="10dp"
+                    android:textColor="#fff"
+                    android:textColorHint="#fff" />
+
+                <EditText
+                    android:id="@+id/email"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="#fff"
+                    android:layout_marginTop="16dp"
+                    android:hint="Email*"
+                    android:background="@drawable/edit_text_backgroung"
+                    android:padding="10dp"
+                    android:inputType="textEmailAddress"
+                    android:textColor="#fff"
+                    android:textColorHint="#fff" />
+
+                <EditText
+                    android:id="@+id/password"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:backgroundTint="#fff"
+                    android:hint="Password*"
+                    android:padding="10dp"
+                    android:background="@drawable/edit_text_backgroung"
+                    android:textColor="#fff"
+                    android:textColorHint="#fff" />
+
+                <EditText
+                    android:id="@+id/Cpassword"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:backgroundTint="#fff"
+                    android:hint="Retype Password*"
+                    android:padding="10dp"
+                    android:background="@drawable/edit_text_backgroung"
+                    android:textColor="#fff"
+                    android:textColorHint="#fff" />
+
+                <TextView
+                    android:id="@+id/college"
+                    android:clickable="true"
+                    android:onClick="selectCollege"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:backgroundTint="#fff"
+                    style="@style/TextAppearance.AppCompat.Medium"
+                    android:background="@drawable/edit_text_backgroung"
+                    android:text="Select College"
+                    android:padding="10dp"
+                    android:textColor="#fff"
+                    android:textColorHint="#fff" />
+
+                <EditText
+                    android:id="@+id/student_id"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:backgroundTint="#fff"
+                    android:background="@drawable/edit_text_backgroung"
+                    android:hint="Student Id"
+                    android:padding="10dp"
+                    android:textColor="#fff"
+                    android:textColorHint="#fff" />
+
+
+                <TextView
+                    android:id="@+id/year"
+                    android:clickable="true"
+                    android:onClick="selectYear"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:backgroundTint="#fff"
+                    style="@style/TextAppearance.AppCompat.Medium"
+                    android:hint="Select Year"
+                    android:padding="10dp"
+                    android:background="@drawable/edit_text_backgroung"
+                    android:textColor="#fff"
+                    android:textColorHint="#fff" />
+
+                <TextView
+                    android:id="@+id/branch"
+                    android:clickable="true"
+                    android:onClick="selectBranch"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:backgroundTint="#fff"
+                    style="@style/TextAppearance.AppCompat.Medium"
+
+                    android:hint="Select Branch"
+                    android:padding="10dp"
+                    android:textColor="#fff"
+                    android:textColorHint="#fff" />
+
+                <TextView
+                    android:id="@+id/section"
+                    android:clickable="true"
+                    android:onClick="selectSection"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:backgroundTint="#fff"
+                    style="@style/TextAppearance.AppCompat.Medium"
+                    android:editable="false"
+                    android:hint="Select Section"
+                    android:padding="10dp"
+                    android:textColor="#fff"
+                    android:textColorHint="#fff" />
+
+
+
+
+                <Button
+                    android:id="@+id/button_register"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:padding="10dp"
+                    android:onClick="register"
+                    android:textColor="#fff"
+                    android:text="Register"
+                    android:background="@android:color/transparent" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+    <View
+        android:id="@+id/lineView"
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_above="@+id/signupTxt"
+        android:background="#fff" />
+
+    <TextView
+        android:id="@+id/signupTxt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:gravity="center"
+        android:clickable="true"
+        android:onClick="login"
+        android:background="@drawable/edit_text_backgroung"
+        android:padding="16dp"
+        android:text="Already have an account? Login"
+        android:textColor="#fff" />
+
+</RelativeLayout>
